@@ -233,7 +233,7 @@ const createDefaultAffiliateProgram = async () => {
 };
 
 // Initialize default admin after MongoDB connection
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/wonderbot')
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://magudi:WB@magudi.123@cluster0.j3ccece.mongodb.net/?appName=Cluster0')
   .then(() => {
     console.log('MongoDB connected');
     createDefaultAdmin();
