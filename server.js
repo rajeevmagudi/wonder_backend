@@ -50,7 +50,7 @@ app.use(cors({
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true
+  // credentials: true
 }));
 
 // Special handling for DODO webhooks - must be before express.json()
