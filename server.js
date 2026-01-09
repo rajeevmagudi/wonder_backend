@@ -45,7 +45,7 @@ const app = express();
 // app.use(cors());
 app.use(cors({
   origin: [
-    "https://wonder-coral.vercel.app/", "https://wobokids.com/",
+    "https://wonder-coral.vercel.app", "https://wobokids.com",
     "http://localhost:3000" // React local
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
