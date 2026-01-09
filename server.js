@@ -42,7 +42,16 @@ const { AffiliateProgram, AffiliateLink, AffiliateClick } = require('./models/af
 const app = express();
 
 // Middleware
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: [
+    "https://wonder-coral.vercel.app/", "https://wobokids.com/",
+    "http://localhost:3000" // React local
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true
+}));
 
 // Special handling for DODO webhooks - must be before express.json()
 app.use('/api/payments/webhook', express.raw({ type: 'application/json' }));
